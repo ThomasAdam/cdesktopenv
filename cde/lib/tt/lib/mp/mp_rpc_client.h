@@ -65,7 +65,6 @@ class _Tt_rpc_client : public _Tt_object {
 	int			_socket;
 	uid_t			_server_uid;
 	_Tt_auth		_auth;
-	char			_servername[MAXNETNAMELEN];
 	CLIENT			*_client;
 	clnt_stat		_clnt_stat;
 #if defined(OPT_TLI)

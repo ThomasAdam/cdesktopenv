@@ -41,7 +41,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <stdio.h>
-
+#include <unistd.h>
 
 /*
  * err =  isrepair(isfname, verbose)
@@ -62,14 +62,14 @@
  *   verbose option (if set to nonzero) will print messages to stdout.
  */
 
-Static	char *rp_readrecord_v(), *rp_readrecord_f();
-Static int printkey(int, struct keydesc *, int (*)(const char *, ...));
-Static void cmd_error(const char *, int (*)(const char *, ...));
-Static int typeletter();
-Static rp_readcntlpg();
+static	char *rp_readrecord_v(), *rp_readrecord_f();
+static int printkey(int, struct keydesc *, int (*)(const char *, ...));
+static void cmd_error(const char *, int (*)(const char *, ...));
+static int typeletter();
+static int rp_readcntlpg();
 static int  isnoprintf(const char *, ...);
 
-isrepair(isfname, verbose)
+int isrepair(isfname, verbose)
     char	*isfname;
     int		verbose;
 {
@@ -94,7 +94,7 @@ isrepair(isfname, verbose)
   sigset_t    oldmask;
   sigset_t    allsignals;
   char	      Buffer[BUFSIZ];
-  char	      *buffer;
+  char	      *buffer = NULL;
 
 
   print = verbose ? printf : isnoprintf;
@@ -319,7 +319,7 @@ isrepair(isfname, verbose)
 static char	recordbuffer[ISMAXRECLEN + LONGSIZE];
 
 /* rp_readcntlpg() - Read the control page */
-Static 
+static int 
 rp_readcntlpg(datfd, cntlpg)
     int		datfd;
     char	*cntlpg;
@@ -331,7 +331,7 @@ rp_readcntlpg(datfd, cntlpg)
 }
 
 /* rp_readrecord_f() - Read a record from .rec file */
-Static char *
+static char *
 rp_readrecord_f(datfd, offset, reclen)
     int		datfd;
     long	offset;
@@ -350,7 +350,7 @@ rp_readrecord_f(datfd, offset, reclen)
 }
 
 /* rp_readrecord_v() - Read a record from .rec file */
-Static char *
+static char *
 rp_readrecord_v(datfd, varfd, offset, minreclen, maxreclen)
     int		datfd, varfd;
     long	offset;

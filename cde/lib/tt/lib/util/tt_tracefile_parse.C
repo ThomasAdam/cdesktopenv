@@ -70,7 +70,7 @@ _tt_trace_parse(_Tt_string& parse_buf,
 
 	iserr = 0;
 	
-	while (token = get_token(prev, parse_buf, buf_ptr, value)) {
+	while ((token = get_token(prev, parse_buf, buf_ptr, value))) {
 
 		if (token == _TT_TRACE_UNKNOWN) {
 			print_error(parse_buf, buf_ptr);

@@ -40,8 +40,6 @@
 #include "mp/mp_pattern.h"
 #include "mp/mp_procid.h"
 
-const int Tt_trace_buf_len = 4096;
-
 _Tt_trace_stream::_Tt_trace_stream()
 {
 }

@@ -101,7 +101,7 @@ tt_x_inline(XDR *xp, int len)
     /* It is better to promote len to caddr_t than demote x_base to
        int for 64 bit arch.
     */
-    if (len > 0 && (caddr_t) len < xp->x_base) {
+    if (len > 0 && (void *)&len < xp->x_base) {
 	xp->x_handy += RNDUP (len);
 #if defined(ultrix) || defined(__osf__)
 	return (int *) xp->x_private;

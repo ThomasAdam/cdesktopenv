@@ -32,8 +32,4 @@
 #define DONT_EXTERN_TT_LIB_VERSION
 #include "util/copyright.h"
 
-const char _tt_lib_copyright[] = _TT_COPYRIGHT;
-const char _tt_lib_copyright2[] = _TT_COPYRIGHT2;
-const char _tt_lib_copyright3[] = _TT_COPYRIGHT3;
-
 const char *_tt_lib_version = TT_VERSION_STRING;

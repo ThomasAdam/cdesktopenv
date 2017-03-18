@@ -97,7 +97,7 @@ class Dbck_options : public _Tt_object {
 	int			debug_level()	const{return _debug_level;};
 
 	virtual char *		type_string() const {
-		return "Dbck_options";
+		return (char *)"Dbck_options";
 	};
 	virtual void		print(FILE *f = stdout) const;
 

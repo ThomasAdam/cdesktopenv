@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isstart.c /main/3 1995/10/23 11:45:08 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isstart.c 1.9 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isstart.c 1.9 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -173,7 +173,7 @@ _amstart(isfhandle, record, reclen, readmode,
     int			keylen;
 {
     Fcb			*fcb;
-    Recno		recnum2;
+    Recno		recnum2 = 0;
     int			err;
     Crp			*newcrp = NULL;
     char		recbuf [ISMAXRECLEN];

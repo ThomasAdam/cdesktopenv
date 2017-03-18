@@ -341,8 +341,8 @@ Tt_status _Tt_typedb::
 init_xdr(_Tt_typedbLevel xdb)
 {
 	_Tt_typedb_ptr		tmpdb;
-	Tt_status		status;
-	
+	Tt_status		status = TT_OK;
+
 	if (! _tt_map_xdr_dbpaths(user_db, system_db, network_db)) {
 		_tt_syslog(stderr, LOG_ERR, "$TTPATH: %s", strerror(EINVAL));
 		return(TT_ERR_PATH);
@@ -441,7 +441,7 @@ merge_from(const _Tt_string &dbpath, _Tt_typedb_ptr &tdb)
 		}
 	}
 
-	if (f = fopen((char *)dbpath, "r")) {
+	if ((f = fopen((char *)dbpath, "r"))) {
 		fcntl(fileno(f), F_SETFD, 1);	/* close on exec */
 		result = merge_from(f, tdb, version);
 		fclose(f);

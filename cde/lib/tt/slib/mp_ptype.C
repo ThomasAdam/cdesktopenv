@@ -281,7 +281,7 @@ launch(_Tt_s_message_ptr &m, const _Tt_msg_trace &trace)
 	_Tt_string			start_string_prop("start");
 	_Tt_string			start_cmd = (char *)0;
 	_Tt_ptype_prop_list_cursor	propc;
-	char				*cargv[4];
+	char const			*cargv[4];
 	int				maxfds;
 	pid_t				pid;
 
@@ -408,7 +408,7 @@ launch(_Tt_s_message_ptr &m, const _Tt_msg_trace &trace)
 		cargv[2] = (char *)start_cmd;
 		cargv[3] = (char *)0;
 		trace << "execv(\"/bin/sh -c " << start_cmd << "\");";
-		execv("/bin/sh", cargv);
+		execv("/bin/sh", (char * const *)cargv);
 #endif
 		exit(1);
 	      default:

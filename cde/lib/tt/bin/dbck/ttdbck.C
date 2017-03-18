@@ -56,8 +56,6 @@
 #include "tt_db_server_consts.h"
 #include "tt_isstrerror.h"
 
-TT_INSERT_COPYRIGHT
-
 #ifdef OPT_PATCH
 static char PatchID[] = "Patch Id: 100626_03.";
 static int Patch_ID100626_03;

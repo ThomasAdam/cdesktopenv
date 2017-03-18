@@ -107,9 +107,9 @@ ttdnd_negotiate_types(
 	const char *s, *t;
 
 	tlist = targettypes;
-	while (t = *tlist++) {
+	while ((t = *tlist++) != NULL) {
 		slist = sourcetypes;
-		while (s = *slist++) {
+		while ((s = *slist++) != NULL) {
 			if (0==strcmp(s,t)) {
 				return (char *)t;
 			}

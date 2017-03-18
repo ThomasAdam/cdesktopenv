@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isrename.c /main/3 1995/10/23 11:43:48 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isrename.c 1.10 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isrename.c 1.10 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -42,6 +42,7 @@ static char sccsid[] = "@(#)isrename.c 1.10 89/07/17 Copyr 1988 Sun Micro";
 
 #include "isam_impl.h"
 #include <sys/time.h>
+#include <unistd.h>
 
 void _removelast();
 static void _removelast2();

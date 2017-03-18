@@ -121,7 +121,7 @@ $(DTENVLIBDIR):$(MOTIFENVLIBDIR):$(XENVLIBDIR):$(SYSTEMENVLIBDIR)
 
 #ifndef CdeProjectDefines
 # define CdeProjectDefines	\
-	-DANSICPP -DMULTIBYTE -DNLS16 \
+	-Wall -Werror -Wno-switch -Wno-varargs -DANSICPP -DMULTIBYTE -DNLS16 \
 	-DOSMAJORVERSION=OSMajorVersion -DOSMINORVERSION=OSMinorVersion
 #endif
 #ifdef ProjectDefines

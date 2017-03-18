@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: ispageio.c /main/3 1995/10/23 11:42:51 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)ispageio.c 1.3 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)ispageio.c 1.3 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -40,7 +40,7 @@ static char sccsid[] = "@(#)ispageio.c 1.3 89/07/17 Copyr 1988 Sun Micro";
  *	
  *
  */
-
+#include <unistd.h>
 #include "isam_impl.h"
 
 /*

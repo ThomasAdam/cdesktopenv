@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: ismngfcb.c /main/3 1995/10/23 11:42:28 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)ismngfcb.c 1.4 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)ismngfcb.c 1.4 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -65,7 +65,7 @@ struct hashtable {
 
 static int _hashisfhandle();
 
-static mrused_last = 0;			     /* stamp generator */
+static int mrused_last;			     /* stamp generator */
 
 
 /*
@@ -218,7 +218,7 @@ _hashisfhandle(isfhandle)
     Bytearray		*isfhandle;
 {
     register char	*p;
-    register unsigned	h, g;
+    register unsigned	h, g = 0;
     register int	len;
 
     len = isfhandle->length;
@@ -227,7 +227,7 @@ _hashisfhandle(isfhandle)
 
     while (len-- > 0) {
 	h = (h << 4) + (*p++);
-	if (g = h&0xf0000000) {
+	if (g == (h & 0xf0000000)) {
 	    h = h ^ (g >> 24);
 	    h = h ^ g;
 	}

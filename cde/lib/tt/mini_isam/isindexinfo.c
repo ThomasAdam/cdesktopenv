@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isindexinfo.c /main/3 1995/10/23 11:40:56 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isindexinfo.c 1.2 91/05/16 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isindexinfo.c 1.2 91/05/16 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.

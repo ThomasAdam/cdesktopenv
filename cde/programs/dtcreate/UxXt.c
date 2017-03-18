@@ -20,7 +20,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin Street, Fifth
  * Floor, Boston, MA 02110-1301 USA
  */
-static char sccsid[] = "@(#)96  1.4  com/config/UxXt.c, aic, aic324, 9317324f 5/12/93 15:40:01";
+/* static char sccsid[] = "@(#)96  1.4  com/config/UxXt.c, aic, aic324, 9317324f 5/12/93 15:40:01"; */
 /*
  *  COMPONENT_NAME: AIC           AIXwindows Interface Composer
  *

@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isread.c /main/3 1995/10/23 11:43:35 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isread.c 1.9 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isread.c 1.9 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -160,7 +160,7 @@ _amread(isfhandle, record, reclen, readmode, curpos, recnum, errcode)
     struct errcode	*errcode;
 {
     Fcb			*fcb = NULL;
-    Recno		recnum2;
+    Recno		recnum2 = 0;
     int			err;
     Crp			*crp;
     Btree		*btree = NULL;

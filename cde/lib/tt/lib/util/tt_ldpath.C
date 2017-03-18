@@ -49,7 +49,7 @@
 static int
 find_lib(_Tt_string &cpath, _Tt_string &libname, _Tt_string &fullpath)
 {
-	class stat	st;
+	struct stat	st;
 	int 		result;
 	DIR		*cdir;
 	dirent		*dentry;

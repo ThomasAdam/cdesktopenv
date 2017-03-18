@@ -20,7 +20,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin Street, Fifth
  * Floor, Boston, MA 02110-1301 USA
  */
-static char sccsid[] = "$XConsortium: md5.c /main/2 1996/03/25 10:28:16 rswiston $";
+/* static char sccsid[] = "$XConsortium: md5.c /main/2 1996/03/25 10:28:16 rswiston $"; */
 /*
  *   COMPONENT_NAME: desktop
  *

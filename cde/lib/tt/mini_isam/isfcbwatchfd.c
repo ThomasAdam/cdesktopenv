@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isfcbwatchfd.c /main/3 1995/10/23 11:38:51 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isfcbwatchfd.c	1.8 93/09/07 Copyr 1988-1993 Sun Microsystems, Inc";
+/* static char sccsid[] = "@(#)isfcbwatchfd.c	1.8 93/09/07 Copyr 1988-1993 Sun Microsystems, Inc"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.

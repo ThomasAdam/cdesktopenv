@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isamaddindex.c /main/3 1995/10/23 11:34:12 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isamaddindex.c 1.14 89/09/14 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isamaddindex.c 1.14 89/09/14 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -447,7 +447,7 @@ _attach_dups_serial(srt, pkeydesc2)
 
     _issort_rewind(srt);
 
-    while (curkey = _issort_read(srt)) {
+    while ((curkey = _issort_read(srt)) != NULL) {
 	if (lastkey && memcmp(lastkey + RECNOSIZE + DUPIDSIZE,
 			      curkey + RECNOSIZE + DUPIDSIZE,
 			       netkeylength) == 0)
@@ -638,7 +638,7 @@ Static int _duplicate_exist(srt, keylength)
 
     _issort_rewind(srt);
 
-    while (curkey = _issort_read(srt)) {
+    while ((curkey = _issort_read(srt)) != NULL) {
 	    if (lastkey && memcmp(lastkey + RECNOSIZE, curkey + RECNOSIZE,
 				  netkeylength) == 0) 
 		    return 1;		     /* Duplicate key found */

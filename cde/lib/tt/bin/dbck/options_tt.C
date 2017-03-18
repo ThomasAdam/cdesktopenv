@@ -54,7 +54,7 @@ Dbck_specoptions()
 char * Dbck_specoptions::
 optstring()
 {
-	return "vhf:k:t:bximpaIF:T:Zd:";
+	return (char *)"vhf:k:t:bximpaIF:T:Zd:";
 }
 
 int Dbck_specoptions::

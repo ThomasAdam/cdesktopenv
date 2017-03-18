@@ -48,7 +48,7 @@
  */
 
 #ifndef lint
-static char sccsid[] = "@(#)help.c 1.19 95/03/28 Copyr 1991 Sun Microsystems, Inc.";
+/* static char sccsid[] = "@(#)help.c 1.19 95/03/28 Copyr 1991 Sun Microsystems, Inc."; */
 #endif
 
 #include <EUSCompat.h>

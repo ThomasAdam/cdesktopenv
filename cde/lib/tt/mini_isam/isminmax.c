@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isminmax.c /main/3 1995/10/23 11:42:16 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isminmax.c 1.4 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isminmax.c 1.4 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 
 /*

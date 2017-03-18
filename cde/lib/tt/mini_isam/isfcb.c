@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isfcb.c /main/3 1995/10/23 11:38:34 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isfcb.c 1.9 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isfcb.c 1.9 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -43,6 +43,7 @@ static char sccsid[] = "@(#)isfcb.c 1.9 89/07/17 Copyr 1988 Sun Micro";
 #include <stdlib.h>
 #include "isam_impl.h"
 #include <sys/stat.h>
+#include <unistd.h>
 
 static int _create_datfile(), _create_indfile(), _create_varfile();
 static void _remove_datfile(), _remove_indfile(), _remove_varfile();
@@ -840,8 +841,8 @@ _check_isam_magic(fcb)
     (void)lseek(fcb->datfd, 0L, 0);
     if (read(fcb->datfd, magicbuffer, CP_MAGIC_LEN) < CP_MAGIC_LEN ||
 	/* The following test for compatibilty with `SunISAM 1.0 Beta files. */
-	strncmp(magicbuffer, "SunISAM", strlen(ISMAGIC)) != 0 &&
-	strncmp(magicbuffer, ISMAGIC, strlen(ISMAGIC)) != 0) {
+	(strncmp(magicbuffer, "SunISAM", strlen(ISMAGIC)) != 0 &&
+	 strncmp(magicbuffer, ISMAGIC, strlen(ISMAGIC))) != 0) {
 	return ISERROR;
     }
     else

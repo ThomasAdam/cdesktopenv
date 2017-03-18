@@ -104,7 +104,7 @@ _tt_AuthFileName ()
     char    	dir[PATH_MAX];
 #endif
 
-    if (name = getenv ("TTAUTHORITY"))
+    if ((name = getenv ("TTAUTHORITY")) != NULL)
 	return (name);
 
     name = getenv ("HOME");

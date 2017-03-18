@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isvarrec.c /main/3 1995/10/23 11:45:36 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isvarrec.c 1.8 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isvarrec.c 1.8 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -47,7 +47,7 @@ int  _vl_deleted();			     /* 0/1 returns 1 if record is deleted */
 static void remove_from_chain2();	     /* used by _vlrec_wrrec() */
 long _istail_insert();
 static void _istail_delete();
-static _istail_read();
+static int _istail_read();
 
 /*
  * _vlrec_write(fcb, record, recnum, reclen)
@@ -531,7 +531,7 @@ Static void _istail_delete(fcb, offset)
 
 /* Read tail from .var file */
 
-Static _istail_read(fcb, offset, buffer)
+static int _istail_read(fcb, offset, buffer)
     Fcb			*fcb;
     long		offset;
     char		*buffer;

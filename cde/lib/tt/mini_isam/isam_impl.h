@@ -545,6 +545,59 @@ extern void _ismap_endop(), _ismap_unmapfcb();
 
 extern void _isam_entryhook(), _isam_exithook();
 
+extern int _addkeys(Fcb *, char *, Recno);
+extern int _isfcb_cntlpg_r(Fcb *);
+extern int _validate_keydesc(struct keydesc *, int);
+extern void _iskey_itox(struct keydesc2 *, struct keydesc *);
+extern void _iskey_xtoi(struct keydesc2 *, struct keydesc *);
+extern int _open2_indfile(Fcb *);
+extern int _create_index(Fcb *, struct keydesc2 *);
+extern int _isfcb_altkeyadd(Fcb *, struct keydesc2 *);
+extern int _isfcb_primkeyadd(Fcb *, struct keydesc2 *);
+extern void _issignals_mask(void);
+extern void _issignals_unmask(void);
+extern int _issignals_cntl(int); 
+extern int _amopen(char *, enum openmode, Bool *, int *, int *, Bytearray *,
+    Bytearray *, struct errcode *);
+extern int _amaddprimary(Bytearray *, struct keydesc *, struct errcode *);
+extern int getkeysperleaf(int);
+extern int getkeyspernode(int);
+extern int _watchfd_check(void);
+extern int _watchfd_decr(int);
+extern int _watchfd_max_set(int);
+extern int _watchfd_max_get(void);
+extern int _watchfd_incr(int);
+extern int _isfcb_nfds(Fcb *);
+extern int _isfcb_cntlpg_r(Fcb *);
+extern int _check_isam_magic(Fcb *);
+extern void _isam_warning(char *);
+extern int _isfcb_cntlpg_r2(Fcb *);
+extern int _isfcb_cntlpg_w2(Fcb *);
+extern int _isapplmr(int, char *);
+extern int _isapplmw(int, char *);
+extern int _istail_modify(Fcb *, long, char *, int);
+extern int _bytearr_cmp(Bytearray *, Bytearray *);
+extern int isopen(char *, int);
+extern int isclose(int);
+extern int isbuild(char *, int, struct keydesc *, int);
+extern int isrename(char *, char *);
+extern int iserase(char *);
+extern int isread(int, char *, int);
+extern int iswrite(int, char *);
+extern int isaddprimary(int, struct keydesc *);
+extern int isaddindex(int, struct keydesc *);
+extern int isindexinfo(int, struct keydesc *, int);
+
+extern int iswrrec(int, long, char *);
+extern int _isfsync(int);
+extern int _amwrite(Bytearray *, char *, int, Bytearray *, Recno *,
+    struct errcode *);
+int iscntl(int, int, ...);
+u_short ldunshort(char *);
+int le_odd(int);
+void leftkey_up(Btree *, int);
+
+
 #define stshort(n,p) stint((n), (p))
 #define ldshort(p) ldint(p)
 

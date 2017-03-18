@@ -63,7 +63,7 @@ mark()
 	_Tt_api_stg_stack_elm_ptr e = new _Tt_api_stg_stack_elm;
 	
 	e->entry_type = _Tt_api_stg_stack_elm::STACK_MARK;
-	e->addr = (caddr_t) result;
+	e->addr = (void *)&result;
 	stack->push(e);
 	return result;
 }
@@ -83,7 +83,7 @@ release(int mark)
 	    if (c->entry_type == _Tt_api_stg_stack_elm::STACK_MARK)
 		/* It is better to promote mark to caddr_t than to demote addr
 		   field for a 64 bit arch */
-		if (c->addr == (caddr_t) mark) {
+		if (c->addr == (void *)&mark) {
 		    found = 1;
 		}
 	}

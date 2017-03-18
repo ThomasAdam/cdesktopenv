@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: iserase.c /main/3 1995/10/23 11:38:08 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)iserase.c 1.8 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)iserase.c 1.8 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -42,6 +42,7 @@ static char sccsid[] = "@(#)iserase.c 1.8 89/07/17 Copyr 1988 Sun Micro";
 
 #include "isam_impl.h"
 #include <sys/time.h>
+#include <unistd.h>
 
 static void _unlink_datfile(), _unlink_indfile(), _unlink_varfile();
 static int _amerase();
@@ -68,8 +69,8 @@ int
 iserase(isfname)
     char		*isfname;
 {
-    Isfd		isfd, isfd_nfs;
-    Fab			*fab, *fab_nfs;
+    Isfd		isfd;
+    Fab			*fab;
 
     /*
      * Open the file

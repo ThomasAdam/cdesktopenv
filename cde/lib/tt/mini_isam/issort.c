@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: issort.c /main/3 1995/10/23 11:44:55 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)issort.c 1.3 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)issort.c 1.3 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 
 /*
@@ -66,7 +66,7 @@ _issort_create(reclen,nrecs,compfunc)
     p->ist_allocrecs = nrecs;		     /* Maximum number of records */
 					     /* that can inserted */
     p->ist_nrecs = 0;			     /* Current number of records */
-    p->ist_currec;			     /* Current position */
+    p->ist_currec = 0;			     /* Current position */
     p->ist_compf = compfunc;		     /* Comparison function */
 
     p->ist_array = _ismalloc((unsigned)(reclen * nrecs)); /* Allocate array */

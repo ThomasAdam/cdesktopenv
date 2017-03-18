@@ -56,7 +56,7 @@
 #include <unistd.h>
 #endif
 
-TT_INSERT_COPYRIGHT
+
 
 #ifdef OPT_PATCH
 static char PatchID[] = "Patch Id: 100626_03.";

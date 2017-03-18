@@ -157,7 +157,7 @@ _tt_dir_entries(const _Tt_string &path, bool_t follow_symlinks )
 		epath = epath.cat("/").cat( ename );
 		entries->push( epath );
 	}
-	int closedir_err = closedir( dirp );
+	(void)closedir( dirp );
 	ASSERT(closedir_err == 0, "Could not close directory");
 	return entries;
 

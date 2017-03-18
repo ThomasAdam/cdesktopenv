@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isbuild.c /main/3 1995/10/23 11:36:21 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isbuild.c 1.12 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isbuild.c 1.12 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -42,11 +42,12 @@ static char sccsid[] = "@(#)isbuild.c 1.12 89/07/17 Copyr 1988 Sun Micro";
 
 #include "isam_impl.h"
 #include <netdb.h>
+#include <unistd.h>
 #include <sys/file.h>
 #include <sys/time.h>
+#include <sys/stat.h>
 
 extern char _isam_version[];
-static char *_version_ = _isam_version;
 
 static int _ambuild();
 

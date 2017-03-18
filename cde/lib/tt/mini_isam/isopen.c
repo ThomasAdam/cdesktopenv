@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isopen.c /main/3 1995/10/23 11:42:40 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)isopen.c 1.12 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)isopen.c 1.12 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -45,7 +45,6 @@ static char sccsid[] = "@(#)isopen.c 1.12 89/07/17 Copyr 1988 Sun Micro";
 #include <sys/time.h>
 
 extern char _isam_version[];
-static char *_version_ = _isam_version;
 
 static int _am_open();
 /*
@@ -119,7 +118,7 @@ isopen(isfname, mode)
     return ((int)isfd);			     /* Successful isopen() */
 }
 
-Static int _am_open(fab)
+static int _am_open(fab)
     register Fab	*fab;
 {
     return (_amopen(fab->isfname, fab->openmode, &fab->varlength,

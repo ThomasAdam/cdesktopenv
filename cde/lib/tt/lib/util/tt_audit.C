@@ -290,6 +290,8 @@ entry(const char *argskey, _Tt_entry_pt func, ...)
 				return(TT_ERR_NOMP);
 			}
 		break;
+		default:
+		break;
 	}
 
 	va_start(ap, func);

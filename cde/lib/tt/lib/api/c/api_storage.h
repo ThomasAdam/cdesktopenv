@@ -48,7 +48,7 @@ class _Tt_api_stg_stack_elm : public _Tt_object {
 	_Tt_api_stg_stack_elm() {};
 	~_Tt_api_stg_stack_elm();
 	enum {STACK_MARK, STACK_STORAGE}	entry_type;
-	caddr_t					addr;
+	void					*addr;
 	void		print(FILE *fs = stdout) const;
 };
 

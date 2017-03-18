@@ -758,7 +758,6 @@ object_oriented_dispatch(const _Tt_msg_trace &trace)
 Tt_status _Tt_s_message::
 procedural_dispatch(const _Tt_msg_trace &trace)
 {
-	int				matched_handler = 0;
 	
 	
 	// if handler_ptype is filled in then verify it is a valid
@@ -1045,7 +1044,6 @@ deliver(const _Tt_msg_trace &trace, int deliver_to_observers)
 	_Tt_procid_ptr			handler_procid;
 	_Tt_s_procid_ptr		dummy;
 	int				found_observer = 0;
-	int				best_match = 0;
 
 	_Tt_patlist_ptr opful_pats = _tt_s_mp->opful_pats->lookup(_op);
 	if (opful_pats.is_null()) {

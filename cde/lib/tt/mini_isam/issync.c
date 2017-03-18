@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: issync.c /main/3 1995/10/23 11:45:20 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)issync.c 1.7 89/07/17 Copyr 1988 Sun Micro";
+/* static char sccsid[] = "@(#)issync.c 1.7 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -47,6 +47,7 @@ static char sccsid[] = "@(#)issync.c 1.7 89/07/17 Copyr 1988 Sun Micro";
 #include "isam_impl.h"
 #include <sys/file.h>
 #include <sys/time.h>
+#include <unistd.h>
 
 /*
  * int  issync()
@@ -70,7 +71,7 @@ isfsync(isfd)
 }
 
 
-_issync()
+int _issync()
 {
     int		i;
 
@@ -80,7 +81,7 @@ _issync()
     return (ISOK);
 }
 
-_isfsync(isfd)
+int _isfsync(isfd)
     int		isfd;
 {
     register Fab	*fab;

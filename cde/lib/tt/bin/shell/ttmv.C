@@ -37,8 +37,6 @@
 #include <util/copyright.h>
 #include "mover.h"
 
-TT_INSERT_COPYRIGHT
-
 #ifdef OPT_PATCH
 static char PatchID[] = "Patch Id: 100626_03.";
 static int Patch_ID100626_03;

@@ -69,10 +69,8 @@
 #define AUTH_NONE AUTH_NULL
 #endif
 
-static const char            TT_DB_RPC_PROTO[] = "tcp";
 static const struct timeval  TT_DB_RPC_NORMAL_TIMEOUT = {1000000, 0};
 static const struct timeval  TT_DB_RPC_QUICK_TIMEOUT = {4, 0};
-const int              TT_DB_RPC_RETRIES = 3;
 
 // ********** Old DB Server Compatibility Include Files **********
 #include "db/tt_db_client_consts.h"
@@ -193,7 +191,7 @@ _Tt_db_results _Tt_db_client::connectToDB (const _Tt_string &hostname)
 			// If dbVersion == 1, then we are talking to an old DB server
 			static _tt_auth_level_results results;
 
-			char      *path = "";
+			char      *path;
 			clnt_stat  rpc_status;
 			int       *result = (int *)NULL;
 			result = _tt_min_auth_level_1(&path, dbServer, &rpc_status);

@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $TOG: isdlink.c /main/4 1999/09/29 15:03:15 mgreess $ 			 				 */
 #ifndef lint
-	static char sccsid[] = "@(#)isdlink.c 1.4 89/09/01 Copyr 1988 Sun Micro";
+/* 	static char sccsid[] = "@(#)isdlink.c 1.4 89/09/01 Copyr 1988 Sun Micro"; */
 #endif
 
 /*

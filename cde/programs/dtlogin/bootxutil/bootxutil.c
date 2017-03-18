@@ -21,7 +21,7 @@
  * Floor, Boston, MA 02110-1301 USA
  */
 /* $XConsortium: bootxutil.c /main/4 1996/05/08 20:08:17 drk $ */
-static char sccsid[] = "@(#)31  1.1  src/cde/cde1/dtlogin/bootxutil/bootxutil.c, desktop, cde41J, 9522A_c 5/31/95 18:45:53";
+/* static char sccsid[] = "@(#)31  1.1  src/cde/cde1/dtlogin/bootxutil/bootxutil.c, desktop, cde41J, 9522A_c 5/31/95 18:45:53"; */
 /*
  *
  *   COMPONENT_NAME:  desktop

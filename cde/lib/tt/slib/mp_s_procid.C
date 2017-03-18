@@ -914,7 +914,7 @@ signal_new_message()
 			if (_flags&(1<<_TT_PROC_SIGNALLED)) {
 				signal_succeeded++;
 			} else {
-				if (_socket->send("s", 1)) {
+				if (_socket->send((char *)"s", 1)) {
 					signal_succeeded++;
 				}
 				_flags |= (1<<_TT_PROC_SIGNALLED);

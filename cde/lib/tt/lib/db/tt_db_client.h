@@ -342,9 +342,6 @@ private:
   _Tt_string         dbHostname;
   CLIENT            *dbServer;
   _Tt_string         dbServerNetName;
-#if !defined(OPT_TLI)
-  sockaddr_in        dbSocket;
-#endif
   int		     dbVersion;
 
   void createAuth ();

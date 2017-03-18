@@ -188,7 +188,7 @@ int equivalent(lname, rname)
 /* Recursively create symbolic links from the current directory to the "from"
    directory.  Assumes that files described by fs and ts are directories. */
 
-dodir (fn, fs, ts, rel)
+int dodir (fn, fs, ts, rel)
 char *fn;			/* name of "from" directory, either absolute or
 				   relative to cwd */
 struct stat *fs, *ts;		/* stats for the "from" directory and cwd */
@@ -224,7 +224,7 @@ int rel;			/* if true, prepend "../" to fn before using */
     p = buf + strlen (buf);
     *p++ = '/';
     n_dirs = fs->st_nlink;
-    while (dp = readdir (df)) {
+    while ((dp = readdir (df)) != NULL) {
 	if (dp->d_name[strlen(dp->d_name) - 1] == '~')
 	    continue;
 	strcpy (p, dp->d_name);
@@ -316,7 +316,7 @@ int rel;			/* if true, prepend "../" to fn before using */
 }
 
 
-main (ac, av)
+int main (ac, av)
 int ac;
 char **av;
 {

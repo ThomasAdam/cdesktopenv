@@ -37,7 +37,7 @@
 #include <util/copyright.h>
 #include "rcopier.h"
 
-TT_INSERT_COPYRIGHT
+
 
 /*
  * main()

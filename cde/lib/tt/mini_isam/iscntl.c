@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: iscntl.c /main/3 1995/10/23 11:36:59 rswiston $ 			 				 */
 #ifndef lint
-static char sccsid[] = "@(#)iscntl.c	1.8 94/11/17";
+/* static char sccsid[] = "@(#)iscntl.c	1.8 94/11/17"; */
 #endif
 /*
  * Copyright (c) 1988 by Sun Microsystems, Inc.
@@ -79,16 +79,8 @@ static char sccsid[] = "@(#)iscntl.c	1.8 94/11/17";
 
 typedef int (* intfunc)();
 
-#if defined(linux) || defined(CSRG_BASED) || defined(sun)
 int 
 iscntl(int isfd, int func, ...)
-#else
-int 
-iscntl(isfd, func, va_alist)
-    int			isfd;
-    int			func;
-    va_dcl
-#endif
 {
     extern int		(*_isfatal_error_set_func())();
     va_list		pvar;

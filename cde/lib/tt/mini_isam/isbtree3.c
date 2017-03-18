@@ -26,7 +26,7 @@
 /*%%  (c) Copyright 1993, 1994 Novell, Inc. 				 */
 /*%%  $XConsortium: isbtree3.c /main/3 1995/10/23 11:36:12 rswiston $ 			 				 */
 #ifndef lint
-    static char sccsid[] = "@(#)isbtree3.c 1.5 89/07/17 Copyr 1988 Sun Micro";
+/*     static char sccsid[] = "@(#)isbtree3.c 1.5 89/07/17 Copyr 1988 Sun Micro"; */
 #endif
 
 /*
@@ -41,6 +41,7 @@
  *	
  */
 
+#include <unistd.h>
 #include "isam_impl.h"
 
 extern int _iskeycmp();

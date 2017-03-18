@@ -64,7 +64,6 @@ int   pclose(FILE *);
 #define  TT_TYPE_TABLE_BUCKETS  19
 
 static int use_cpp;
-static int cppline(const char *line);
 static void docppline(const char *line, int &lineno, _Tt_string &fname);
 
 /*

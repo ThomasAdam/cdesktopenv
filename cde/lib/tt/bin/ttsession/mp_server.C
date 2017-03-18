@@ -57,12 +57,17 @@
 #include <getopt.h>
 #endif
 
-TT_INSERT_COPYRIGHT
+
 
 #ifdef OPT_PATCH
 static char PatchID[] = "Patch Id: 100626_03.";
 static int Patch_ID100626_03;
 #endif
+
+void		install_signal_handler(void);
+void		notify_start_failure(void);
+int		init_types(void);
+void		print_usage_and_exit(void);
 
 extern char		**environ;
 
@@ -170,10 +175,6 @@ child_exit_status(pid_t child, _Tt_wait_status status)
 
 int main(int argc, char **argv)
 {
-	void		install_signal_handler();
-	void		notify_start_failure();
-	int		init_types();
-	void		print_usage_and_exit();
 	char		*cmd = (char *)0;
 	char		*cargv[MAXARGS];
 	int		c;
@@ -251,12 +252,12 @@ int main(int argc, char **argv)
 				_tt_syslog( errstr, LOG_ERR, "%m" );
 				exit(1);
 			}
-			cargv[i] = '\0';
+			cargv[i] = NULL;
 
 			// if no program given then use $SHELL
 			if (! cargv[0]) {
 				cargv[0] = getenv("SHELL");
-				cargv[1] = '\0';
+				cargv[1] = NULL;
 			}
 			cmd = cargv[0];
 			background_mode = 0;

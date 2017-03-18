@@ -117,7 +117,7 @@ _Tt_db_file::setTtDBFileDefaults (const _Tt_string               &file,
 			               dbFileNetworkPath);
     }
 
-    if ((dbResults == TT_DB_OK)) {
+    if (dbResults == TT_DB_OK) {
       if (!isFileInDatabase()) {
 	if (dbResults != TT_DB_ERR_DB_OPEN_FAILED) {
 	  dbResults = createDBFile();

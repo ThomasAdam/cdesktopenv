@@ -485,7 +485,6 @@ DtActionInvoke(
         DtActionCallbackProc statusUpdateCb,
         XtPointer       client_data)
 {
-    register int	i;
     ActionRequest	*request;
     char 		*contextHost= NULL;/* dummy to replace old parameter */
     _DtActInvRecT	*invp;		/* pointer to invocation record */
@@ -1281,7 +1280,7 @@ CreateActionRequest(
         _DtActInvRecT *invp )
 
 {
-   register int i, j;
+   register int i;
    int numObjects = 0;
    ObjectData * objectDataArray;
    ObjectData objectData;
@@ -1719,10 +1718,8 @@ ParseFileArgument(
         Boolean typeFile )
 
 {
-   register int i, j;
    String dirName;
    String host;
-   String dir;
    int hostId;
    char *resolvedPath=NULL;
 
@@ -2428,9 +2425,6 @@ __ExtractCWD(
         Boolean useObjectInfo )
 
 {
-   String msg;
-   String lastCh;
-   int lastChLen;
    register ActionPtr action = request->clonedAction;
 
    /* Only dropped objects will have been 'typed' at this point */
@@ -3573,7 +3567,6 @@ InsertUnmappedArgumentString(
         Boolean addLeadingSpace )
 
 {
-   char * host = NULL;
    int size;
 
    /* No mapping is necessary here. */
@@ -3920,8 +3913,6 @@ CancelPromptDialog(
         XtPointer call_data )
 
 {
-   unsigned long evalStatus;
-   unsigned long userStatus;
    _DtActInvRecT *invp;
 
    /* Destroy the dialog */
@@ -4074,8 +4065,6 @@ ProcessPromptDialog(
    if (ProcessRequest(dialog->associatedWidget, dialog->request))
    {
        _DtActInvRecT	*invp;
-       unsigned long    evalStatus;
-       unsigned long    userStatus;
 
        if ( (invp = _DtActFindInvRec(dialog->request->invocId)) )
        {
@@ -4479,8 +4468,6 @@ CancelRequest(
 {
    register int i;
    register ContinueDialog *dialog = (ContinueDialog *)user_data;
-   unsigned long evalStatus;
-   unsigned long userStatus;
    _DtActInvRecT *invp;
 
    /* Destroy the dialog */

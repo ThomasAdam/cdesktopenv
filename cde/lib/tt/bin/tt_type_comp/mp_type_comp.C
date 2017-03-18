@@ -72,7 +72,7 @@ extern "C" void xdrstdio_create(XDR *, FILE *, enum xdr_op);
 
 typedef void (*cmd_fn)();
 
-TT_INSERT_COPYRIGHT
+
 
 #ifdef OPT_PATCH
 static char PatchID[] = "Patch Id: 100626_03.";
@@ -179,7 +179,6 @@ void
 merge(int overwrite)
 {
 
-	int				status_ok = 1;
 	int				exists;
 	_Tt_typedb_ptr			db;
 	_Tt_ptype_table_cursor		db_ptypes;
@@ -339,7 +338,6 @@ f_list_types(int otypes)
 {
 	_Tt_typedb_ptr		db;
 	Tt_status		status;
-	int			checkOW = 0;
 
 	if (cedb == TypedbNone) {
 		cedb = TypedbAll;
@@ -615,7 +613,7 @@ process_args(int argc, char **argv)
 			cpp_options = cpp_options.cat(argv[i]).cat(" ");
 			// getopt stops processing on an empty string, so
 			// need a fake option for below
-			argv[i] = "-Y";
+			argv[i] = (char *)"-Y";
 		}
 	}
 	int need_file = 1;

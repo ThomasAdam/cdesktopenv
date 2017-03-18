@@ -22,6 +22,8 @@ WIN32WORLDOPTS = -i
     MAKE_CMD = $(MAKE) $(MAKE_OPTS)
    NMAKE_CMD = $(NMAKE) $(MAKE_OPTS)
        FLAGS = $(MFLAGS) -f Makefile.ini BOOTSTRAPCFLAGS="$(BOOTSTRAPCFLAGS)"
+       CXXFLAGS="$(CXXFLAGS) -Werror -Wall -Wno-switch"
+
 
 all:
 	@$(MAKE_CMD) xmakefile-exists || $(MAKE) all-initial

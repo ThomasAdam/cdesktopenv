@@ -102,7 +102,7 @@ void sig_handler(int sig);
 #define TTDB_DEBUG_SYSLOG(txt)
 #endif
 
-TT_INSERT_COPYRIGHT
+
 
 const char	*_TT_UNIX_OPT = "unix";
 const char	*_TT_DES_OPT = "des";

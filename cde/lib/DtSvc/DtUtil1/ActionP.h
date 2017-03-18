@@ -311,9 +311,9 @@
 #define IS_BUFFER_OBJ(mask)		( mask & _DtAct_BUFFER_OBJ_BIT )
 #define IS_STRING_OBJ(mask)		( mask & _DtAct_STRING_OBJ_BIT )
 #define IS_UNKNOWN_IF_DIR(mask)		( mask & _DtAct_UNKNOWN_IF_DIR_BIT )
-#define	IS_DIR_OBJ(mask)		( mask & \
+#define	IS_DIR_OBJ(mask)		( (mask & \
 					  ( _DtAct_UNKNOWN_IF_DIR_BIT \
-					  | _DtAct_DIR_OBJ_BIT ) \
+					  | _DtAct_DIR_OBJ_BIT )) \
 					   == _DtAct_DIR_OBJ_BIT)
 
 #define SET_WRITE_OBJ(mask)		( mask |= _DtAct_WRITE_OBJ_BIT )

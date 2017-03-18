@@ -63,7 +63,7 @@ class Dbck_specoptions : public Dbck_options {
 	};
 
 	virtual	char *		type_string() const{
-		return "Dbck_specoptions";
+		return (char *)"Dbck_specoptions";
 	};
 	virtual void 		print(FILE *f = stdout) const;
 

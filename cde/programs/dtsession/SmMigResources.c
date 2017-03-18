@@ -21,7 +21,7 @@
  * Floor, Boston, MA 02110-1301 USA
  */
 /* $XConsortium: SmMigResources.c /main/4 1996/05/08 20:11:34 drk $ */
-static char sccsid[] = "@(#)48  1.2  src/cde/cde1/dtsession/SmMigResources.c, desktop, cde41J, 9520A_all 5/16/95 08:31:12";
+/* static char sccsid[] = "@(#)48  1.2  src/cde/cde1/dtsession/SmMigResources.c, desktop, cde41J, 9520A_all 5/16/95 08:31:12"; */
 /*
  *   COMPONENT_NAME: desktop
  *
