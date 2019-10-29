@@ -8,7 +8,7 @@ https://sourceforge.net/p/cdesktopenv/code/commit_browser
 # 2.2.4 06/19/2016
 
 This release incorporates several fixes for newer operating systems
-(linux and the BSD's primarily).  It also removes the requirement to
+(Linux and the BSD's primarily).  It also removes the requirement to
 build with Xp (X Print extension), which is no longer supported.  As
 usual, many warnings and bugs were also fixed.
 
@@ -19,7 +19,7 @@ Douglas Carmichael (2):
       Changed memcpy() to memmove() to stop coredumping on OpenBSD 5.7.
 
 Giacomo Comes (2):
-      Use /var/spool instead of /usr/spool on linux
+      Use /var/spool instead of /usr/spool on Linux
       call fclose(infile) after print_progress()
 
 Isaac Dunham (1):
@@ -27,7 +27,7 @@ Isaac Dunham (1):
 
 Jon Trulson (6):
       ksh: fix up shipin for more modern systems WRT test and wc
-      dtlogin: use XDM authentication instead of MIT/DES on linux
+      dtlogin: use XDM authentication instead of MIT/DES on Linux
       ttcp: fix missing arg to fprintf
       dbtoman: fix missing arg to fprintf
       dtappbuilder: replace accidental %a with %% in write_func_as_strings()
@@ -40,7 +40,7 @@ Pascal de Bruijn (2):
 Peter Howkins (3):
       Disable all code related to libXp     deprecated and mostly no longer included on current OSes
       dtstyle: backdrops, allow jpg/png if motif supports it     add file extensions to all types but .pm/.bm. This lets XmGetPixmap() load them.
-      dtstyle: remove some accidentally commited debug code
+      dtstyle: remove some accidentally committed debug code
 
 Ulrich Wilkens (3):
       Fix FreeBSD 10.2 build
@@ -79,7 +79,7 @@ Edmond ORIGNAC (1):
       Fix dtprintinfo parser
 
 Isaac Dunham (1):
-      contrib/rc/linux/dtlogin: Make the init script work.
+      contrib/rc/Linux/dtlogin: Make the init script work.
 
 Johannes von Rotz (1):
       Let "make World" run through on OpenBSD
@@ -91,8 +91,8 @@ Jon Trulson (63):
       ttsnoop: NULL is not 0
       Revert "ttsnoop: NULL is not 0"
       dtappbuilder/dtcodegen: Fix up some warnings, remove use of sys_errlist[].
-      dthelp: fixup some warnings with special.h(s)
-      dttypes: use regex on linux too.
+      dthelp: fix up some warnings with special.h(s)
+      dttypes: use regex on Linux too.
       dtappbuilder: abmf.c: more warnings killed
       it_IT.ISO8859-1/types/_common.dt.tmsg: Apply manual one-line patch
       DtHelp: Coverity (memory corruption)
@@ -128,25 +128,25 @@ Jon Trulson (63):
       dtsession: Coverity (memory corruption, moderate)
       dtwm/PopUpMenu: Coverity (memory corruption, moderate)
       dtwm/WmFP: Coverity (memory corruption, moderate)
-      dtlogin/xdmcp: fixup many warnings and a possible declaration bug
+      dtlogin/xdmcp: fix up many warnings and a possible declaration bug
       DtXinerama: no need to check unsigned int < 0 (CID:86121)
       Merge branch 'master' of ssh://git.code.sf.net/p/cdesktopenv/code
-      dtsession/SmGlobals: fixup 17 coverity issues.
+      dtsession/SmGlobals: fix up 17 Coverity issues.
       dtsession/SmCommun: fix bogus check (CID 89326)
       dtsession/SmDB: error handling issues (CID 87778, 87926)
       dtsession/SmLock: potential null deref (CID 87561, 87957, 88181)
       dtsession/SmGlobals: use of tainted string (CID 89450)
       dtsession/SmGlobals: unlink mkstemp generated files.
       dtsession/SmGlobals: re-add smGD.savePath to generated paths, was lost in mkstemp changes.
-      dtsession/SmRestore: fixup 8 coverity issues.
+      dtsession/SmRestore: fix up 8 Coverity issues.
       dtsession/SmRestore: redo defaultCwd detection in StartClient() to be safer
       dtsession/SmSave: get rid of use of tempnam (CID 89359)
       dtsession/SmSave: use absolute path to rm in system()
       dtsession/SmUI: fix tainted var (CID 88216)
       dtsession/SrvFile_io: fix CID's 88299 and 89441
       dtsession/SrvPalette: fix CID 89227
-      Merge branch 'coverity_dtsession'
-      dtscreen: don't use old version of round() on linux either
+      Merge branch 'Coverity_dtsession'
+      dtscreen: don't use old version of round() on Linux either
       cde: change revision to 2.2.3
 
 Matthew Howkins (3):
@@ -156,14 +156,14 @@ Matthew Howkins (3):
 
 Peter Howkins (53):
       dtlogin: start to resolve static analysis warnings
-      libDtWidget: Resolve some static analyser warnings
+      libDtWidget: Resolve some static analyzer warnings
       dtlogin: Resolve 27 compiler warnings
       dtlogin: resolve 8 compiler warnings.
       dtlogin: resolve more static analysis warnings
       Merge branch 'master' of ssh://git.code.sf.net/p/cdesktopenv/code
       dtcalc: resolve 13 compiler warnings on 64 bit builds.
-      dsdm: resolve coverity warnings CID 86139 86255 86331 86345 86418 86517 86526 86567 86590 86616
-      dsdm: convert k&r function declarations to ansi, and correct the warnings this then uncovered.
+      dsdm: resolve Coverity warnings CID 86139 86255 86331 86345 86418 86517 86526 86567 86590 86616
+      dsdm: convert k&r function declarations to ANSI, and correct the warnings this then uncovered.
       dtaction: resolve 2 compiler warnings.
       dtwm: resolve 92 compiler warnings (related to 64 bit pointer to int coversions)
       dtstyle: resolve 30 compiler warnings.
@@ -180,7 +180,7 @@ Peter Howkins (53):
       libDtHelp: Resolve 11 compiler warnings.
       libDtPrint: Resolve the 1 remaining compiler warning.
       libDtSvc: Resolve 28 compiler warnings.
-      dtscreen: convert K&R prototypes to ansi C
+      dtscreen: convert K&R prototypes to ANSI C
       dtcm: Resolve CID 87384
       dtcm: Resolve CID 87408
       dtcm: Resolve CID 87562
@@ -245,21 +245,21 @@ Eugene Doudine (7):
 Jon Trulson (52):
       update HISTORY file for 2.2.1, though a little too late :)
       building_release_archive: add some steps and clean up
-      linux depend: stop using makedepend, use gcc instead
+      Linux depend: stop using makedepend, use gcc instead
       libDtTerm: add include <stdio.h> so FILE is properly defined.
-      linux: Use installed X11 header files rather than requiring /imports/x11/include
+      Linux: Use installed X11 header files rather than requiring /imports/x11/include
       nsgmls: fix up some gcc 4.8 warnings.
-      linux.cf: fix typo and some formatting.
-      linux: move dependancy handling out of linux.cf and into new lnxDep.rules file.
+      Linux.cf: fix typo and some formatting.
+      Linux: move dependancy handling out of Linux.cf and into new lnxDep.rules file.
       mp_rpc_server.C: limit iteration of svc_fdset to FD_SETSIZE, as per spec.
       dtdocbook/instant: *always* link with local libtcl.a
       dtpad: stub out XmPrint stuff if there is no XmPrint support.
       dtmail: stub out XmPrint stuff if there is no XmPrint support.
       dtcm: stub out XmPrint stuff if there is no XmPrint support.
       dtinfo: stub out XmPrint stuff if there is no XmPrint support.
-      linux: libDtSearch requires linking with -lm
+      Linux: libDtSearch requires linking with -lm
       libcsa: fix up some stupidness.
-      tt_xdr_utils.h: fix build error on linux/bsd introduced with illumos initial patch.
+      tt_xdr_utils.h: fix build error on Linux/bsd introduced with illumos initial patch.
       Updated Greek (el_GR.UTF-8) translations from Antonis Tsolomitis.
       PrintTopics.c: fix up some warnings
       pax.h: include stdio.h
@@ -270,13 +270,13 @@ Jon Trulson (52):
       MotifUI.C: NULL is not 0
       dtcm/server/: just return NULL, not the address of a dummy local variable.  Geez.
       cleanup: eliminate "implicit declaration" warnings.
-      linux.cf: turn off writable strings warnings (write-strings)
-      linux: build with thread safety and REENTRANT enabled.
+      Linux.cf: turn off writable strings warnings (write-strings)
+      Linux: build with thread safety and REENTRANT enabled.
       dtcm/reminders.c: NULL is not 0
       dtcm/rfp.c: NULL is not 0
       cleanup: eliminate missing sentinel warnings
       xtclient.c, spcd_event.c: stop referencing fds_bits directly
-      linux.cf: with fds_bits fixes, stop using _POSIX_C_SOURCE=199309L and _XOPEN_SOURCE defines
+      Linux.cf: with fds_bits fixes, stop using _POSIX_C_SOURCE=199309L and _XOPEN_SOURCE defines
       xtclient.c: fix debug statement regarding fd number
       dtsession: screensaver don't pass random attributes to XScreenSaverSetAttributes()
       InterruptibleCmd.C, WorkingDialogManager.C: NULL is not 0
@@ -333,7 +333,7 @@ Jon Trulson (9):
       dtinfogen_worker: don't free variables then use them later.
       Merge branch 'master' of ssh://git.code.sf.net/p/cdesktopenv/code
       Add dtwm.mgg Greek UTF translation from Antonis Tsolomitis
-      dtexec: fix a case on linux where an infinite loop could occur.
+      dtexec: fix a case on Linux where an infinite loop could occur.
       dtexec: use proper FD_CLOEXEC rather than a hardcoded 1
       Fix for xorg-xkb partially freezes dtwm when keyboard layout is changed.
       Re-add NO_DTINFO blocks removed in NetBSD port patch
@@ -384,7 +384,7 @@ Ulrich Wilkens (16):
       Introduction of BSDArchitecture
       NetBSD port
       Fix for dtinfo segfaults
-      Fix UTF8 problem on non-linux systems
+      Fix UTF8 problem on non-Linux systems
 
 alx (4):
       dticon: fixed "rubber string" drawing on high/true color displays
@@ -400,7 +400,7 @@ alx (4):
 - More work on dtinfo.  It now mostly compiles but is not quite ready
   for prime time.  It is not built be default.
 
-- dtksh now builds on linux systems.
+- dtksh now builds on Linux systems.
 
 - We do not build Motif man pages anymore.
 
@@ -453,7 +453,7 @@ alx (4):
   needed in this regard.
 
 - most modules are operational.  dtinfo is not operational on any
-  platform yet.  dtksh is not yet operational on linux systems.
+  platform yet.  dtksh is not yet operational on Linux systems.
 
 - several thousand compiler warnings have been addressed.
   Unfortunately, there are still several thousand more waiting :(
@@ -465,5 +465,5 @@ alx (4):
 - This is the initial release of CDE form The Open Group based on
   2.1.30.   
 
-  Minimal changes to get it compiling on some common linux distros,
+  Minimal changes to get it compiling on some common Linux distros,
   primarily 32bit.

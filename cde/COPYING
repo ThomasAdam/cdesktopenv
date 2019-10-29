@@ -69,7 +69,7 @@ you if you distribute copies of the library or if you modify it.
 or for a fee, you must give the recipients all the rights that we gave
 you.  You must make sure that they, too, receive or can get the source
 code.  If you link other code with the library, you must provide
-complete object files to the recipients, so that they can relink them
+complete object files to the recipients, so that they can re-link them
 with the library after making changes to the library and recompiling
 it.  And you must show them these terms so they know their rights.
 
@@ -317,7 +317,7 @@ of these things:
     Sections 1 and 2 above); and, if the work is an executable linked
     with the Library, with the complete machine-readable "work that
     uses the Library", as object code and/or source code, so that the
-    user can modify the Library and then relink to produce a modified
+    user can modify the Library and then re-link to produce a modified
     executable containing the modified Library.  (It is understood
     that the user who changes the contents of definitions files in the
     Library will not necessarily be able to recompile the application
